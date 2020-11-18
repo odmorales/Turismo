@@ -1,9 +1,9 @@
 <header>
   <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-Silver border-bottom box-shadow mb-3 shadow-lg p-3 mb-5 rounded" style="background-color: #e3f2fd;"
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3"
   >
     <div class="container">
-      <a class="navbar-brand"  [routerLink]="['/']"><h2>SUNWALK</h2></a>
+      <a class="navbar-brand text-white" [routerLink]="['/']">Pulsaciones</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -25,24 +25,20 @@
             [routerLinkActive]="['link-active']"
             [routerLinkActiveOptions]="{ exact: true }"
           >
-          <button mat-button [routerLink]="['/']">INICIO</button>
+            <a class="nav-link text-white" [routerLink]="['/']">Home</a>
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <!-- <a class="nav-link text-dark" [routerLink]="['/add_sites']"
-              >Sites</a
-            > -->
-            <button mat-button [matMenuTriggerFor]="menu">SITIOS</button>
-            <mat-menu #menu="matMenu">
-              <button mat-menu-item routerLink="/add_sites">Add site</button>
-              <button mat-menu-item routerLink="/list_sites">list sites</button>
-            </mat-menu>
+            <a class="nav-link text-white" [routerLink]="['/consultarSitio']"
+              >Consultar</a
+            >
           </li>
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <button mat-button [routerLink]="['/']"
-              >Fetch data</button>
-          </li>
+            <a class="nav-link text-white" [routerLink]="['/registro']"
+              >Registro</a
+            >
         </ul>
       </div>
     </div>
   </nav>
 </header>
+<header>

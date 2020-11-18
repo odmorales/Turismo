@@ -8,5 +8,8 @@ namespace Entity
         public string Descripcion { get; set; }
         public string Informacion { get; set; }
         public string ImagenesPath { get; set; }
+        public string Ubicacion { get; set; }
+        
+        
     }
 }

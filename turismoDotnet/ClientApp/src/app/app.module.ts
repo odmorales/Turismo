@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { RegistroComponent } from './Sitio/registro/registro.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ConsultarSitioComponent } from './Sitio/consultar-sitio/consultar-sitio.component';
+import { SitioService } from './services/sitio.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { ConsultarSitioComponent } from './Sitio/consultar-sitio/consultar-sitio
     ]),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SitioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

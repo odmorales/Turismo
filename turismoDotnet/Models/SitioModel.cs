@@ -20,6 +20,7 @@ namespace turismoDotnet.Models {
 
         [Required (ErrorMessage  =  "La imagen  es requerida")]
         public string ImagenesPath { get; set; }
+                
     }
     public class SitioViewModel : SitioInputModel {
         public SitioViewModel () {

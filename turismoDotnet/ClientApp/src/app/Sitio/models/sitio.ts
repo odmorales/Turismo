@@ -3,4 +3,5 @@ export class Sitio {
     Descripcion: string;
     Informacion: string;
     ImagenesPath: string;
+    Ubicacion: string;
 }
