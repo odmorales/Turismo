@@ -1,0 +1,48 @@
+<header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-Silver border-bottom box-shadow mb-3 shadow-lg p-3 mb-5 rounded" style="background-color: #e3f2fd;"
+  >
+    <div class="container">
+      <a class="navbar-brand"  [routerLink]="['/']"><h2>SUNWALK</h2></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+        aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded"
+        (click)="toggle()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
+        [ngClass]="{ show: isExpanded }"
+      >
+        <ul class="navbar-nav flex-grow">
+          <li
+            class="nav-item"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+          <button mat-button [routerLink]="['/']">INICIO</button>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <!-- <a class="nav-link text-dark" [routerLink]="['/add_sites']"
+              >Sites</a
+            > -->
+            <button mat-button [matMenuTriggerFor]="menu">SITIOS</button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item routerLink="/add_sites">Add site</button>
+              <button mat-menu-item routerLink="/list_sites">list sites</button>
+            </mat-menu>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <button mat-button [routerLink]="['/']"
+              >Fetch data</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
